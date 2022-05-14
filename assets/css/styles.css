@@ -1,8 +1,7 @@
 :root{
     --primary-color: #FFFB88;
     --secondary-color: #0C8087;
-    font-size: 62.5%;
-    font-family: Poppis, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 *{
@@ -12,10 +11,111 @@
 }
 
 body{
+    height: 100vh;
+    background-color: var(--primary-color);   
     display: flex;
-    justify-items: center;
-    background-color: var(--primary-color);
-    height: 100%;
+    justify-content: center;
 }
 
+.container{
+    border: 2px solid #fff;
+    padding: 30px 40px;
+    width: 50%;    
+    min-width: 500px;
+}
+
+.title{
+    display: flex;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    font-size: 3rem;
+    color: var(--primary-color);
+    border-radius: 6px;
+}
+
+.new-task-container{
+    background-color: var(--secondary-color);
+    padding: 30px 20px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    display: flex;    
+    justify-content: space-between;
+}
+
+.new-task-container input{
+    flex: 3;
+    font-size: 1rem;
+    border: 2px solid #d1d3d4;
+    border-radius: 6px;
+    padding: 12px;
+    font-weight: 500;
+}
+
+.new-task-container input:focus{
+    outline: none;
+    border-color: #41B883;
+}
+
+.new-task-button{
+    flex: 1;
+    border-radius: 6px;
+    font-weight: 500;
+    border: none;
+    background-color: #41B883;
+    color: #FFF;
+    padding: 12px;
+    margin-left: 12px;
+    cursor: pointer;    
+}
+
+.tasks-container {
+    background-color: var(--secondary-color);
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    width: 100%;
+}
+
+.task-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.task-item p:hover{
+    cursor: pointer;
+}
+
+.task-item i{
+    background-color: red;
+    color: #FFF;
+    padding: 12px;
+    border-radius: 6px;    
+}
+
+.task-item i:hover{
+    cursor: pointer;
+}
+
+/* Utilities */
+.error{
+    border: 2px solid red !important;    
+}
+
+.error::placeholder{
+    color: red;
+}
+
+.completed{
+    text-decoration: line-through;
+}
 
