@@ -121,7 +121,7 @@ const refreshTasksUsingLocalStorage = () => {
 
 };
 
-//refreshTasksUsingLocalStorage();
+
 
 addTaskButton.addEventListener('click', () => handleAddTask());
 
