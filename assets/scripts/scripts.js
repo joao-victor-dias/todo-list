@@ -91,6 +91,11 @@ const refreshTasksUsingLocalStorage = () => {
     const tasksFromLocalStorage = JSON.parse(localStorage.getItem("tasks"));
     console.log({tasksFromLocalStorage})
 
+    if(tasksFromLocalStorage ==null)
+    {       
+        return;
+    }
+
     for (const task of tasksFromLocalStorage){
 
         const taskItemContainer = document.createElement("div");
@@ -101,7 +106,7 @@ const refreshTasksUsingLocalStorage = () => {
 
         if (task.isCompleted){
             taskContent.classList.add("completed");
-        }
+        }    
 
         taskContent.addEventListener("click", () => handleClick(taskContent));
 
@@ -121,7 +126,7 @@ const refreshTasksUsingLocalStorage = () => {
 
 };
 
-
+refreshTasksUsingLocalStorage();
 
 addTaskButton.addEventListener('click', () => handleAddTask());
 
